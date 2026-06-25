@@ -17,6 +17,7 @@ body{
   background:var(--bg);
   color:var(--ink);
   line-height:1.8;
+  overflow-x:hidden;
 }
 .page{
   max-width:980px;
@@ -304,6 +305,119 @@ footer{
   align-items:center;
 }
 footer b{color:#D8B978;}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .insight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .plans-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+  .hero {
+    padding: 36px 20px 48px;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+  .hero p.lead {
+    font-size: 14px;
+    max-width: 100%;
+  }
+  section {
+    padding: 28px 20px 10px;
+  }
+  .insight-band {
+    padding: 28px 20px;
+  }
+  .insight-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .insight-card {
+    padding: 16px 14px;
+  }
+  .insight-card .num {
+    font-size: 24px;
+  }
+  .insight-card .lbl {
+    font-size: 12.5px;
+  }
+  h2.section-title {
+    font-size: 19px;
+  }
+  p.section-desc {
+    font-size: 13.5px;
+    max-width: 100%;
+  }
+  .plans-wrap {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .plan-card {
+    padding: 24px 18px;
+  }
+  .plan-card.featured {
+    transform: none;
+  }
+  .plan-price {
+    font-size: 24px;
+  }
+  .plan-card ul li {
+    font-size: 13px;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .why-card {
+    padding: 20px 16px;
+  }
+  .strategy-note {
+    padding: 14px 16px;
+    font-size: 13px;
+  }
+  .kw-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .kw-table-wrap table.kw {
+    min-width: 580px;
+  }
+  .timeline {
+    padding-right: 14px;
+  }
+  .t-item::before {
+    right: -19px;
+    width: 10px;
+    height: 10px;
+  }
+  .t-item p {
+    font-size: 13px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 24px 20px;
+  }
+  .plan-cta {
+    padding: 12px;
+    font-size: 14px;
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    padding: 5px 14px;
+  }
+}
 
 @media print{
   body{background:#fff;}
