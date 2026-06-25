@@ -1,0 +1,578 @@
+export default function Home() {
+  return <
+    
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>پیشنهاد سئو | حوزه لوستر و دکوراسیون نور</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
+  :root{
+    --bg:#FAF7F2;
+    --ink:#1B1B1F;
+    --brass:#9C7A3C;
+    --brass-deep:#6E5527;
+    --ember:#B5481F;
+    --line:#E2D9C8;
+    --panel:#FFFFFF;
+    --muted:#6B6457;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:'Vazirmatn', sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.8;
+  }
+  .page{
+    max-width:980px;
+    margin:0 auto;
+    padding:0 0 60px;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg,#1B1B1F 0%, #2A241C 100%);
+    color:#F4EEE1;
+    padding:70px 56px 90px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(circle at 12% 20%, rgba(156,122,60,0.35) 0, transparent 45%),
+      radial-gradient(circle at 88% 75%, rgba(181,72,31,0.25) 0, transparent 40%);
+    pointer-events:none;
+  }
+  .hero-eyebrow{
+    position:relative;
+    z-index:1;
+    font-size:13px;
+    letter-spacing:1px;
+    color:#D8B978;
+    font-weight:600;
+    border:1px solid rgba(216,185,120,0.4);
+    display:inline-block;
+    padding:6px 16px;
+    border-radius:30px;
+    margin-bottom:26px;
+  }
+  .hero h1{
+    position:relative;
+    z-index:1;
+    font-size:42px;
+    font-weight:800;
+    margin:0 0 18px;
+    line-height:1.45;
+  }
+  .hero h1 span{color:#D8B978;}
+  .hero p.lead{
+    position:relative;
+    z-index:1;
+    font-size:17px;
+    color:#C8C1B2;
+    max-width:640px;
+    margin:0;
+  }
+  .hero .chandelier-mark{
+    position:absolute;
+    left:40px;
+    top:30px;
+    width:120px;
+    opacity:0.5;
+  }
+
+  /* ===== SECTION SHELL ===== */
+  section{padding:56px 56px 10px;}
+  .section-tag{
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--brass-deep);
+    letter-spacing:0.5px;
+    margin-bottom:10px;
+  }
+  h2.section-title{
+    font-size:27px;
+    font-weight:800;
+    margin:0 0 8px;
+    color:var(--ink);
+  }
+  p.section-desc{
+    color:var(--muted);
+    font-size:15px;
+    max-width:680px;
+    margin:0 0 32px;
+  }
+
+  /* ===== KEYWORD INSIGHT BAND ===== */
+  .insight-band{
+    background:var(--ink);
+    color:#F4EEE1;
+    padding:48px 56px;
+    margin:10px 0 0;
+  }
+  .insight-band .section-tag{color:#D8B978;}
+  .insight-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:28px;
+  }
+  .insight-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(216,185,120,0.25);
+    border-radius:10px;
+    padding:20px 18px;
+  }
+  .insight-card .num{
+    font-size:30px;
+    font-weight:800;
+    color:#D8B978;
+    margin-bottom:6px;
+  }
+  .insight-card .lbl{font-size:13.5px;color:#C8C1B2;}
+
+  /* ===== KEYWORD TABLE ===== */
+  .kw-table-wrap{margin-top:18px;}
+  table.kw{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  table.kw thead th{
+    background:#21201B;
+    color:#EFE6D3;
+    font-weight:700;
+    text-align:right;
+    padding:13px 16px;
+    font-size:13px;
+  }
+  table.kw tbody td{
+    padding:11px 16px;
+    border-bottom:1px solid var(--line);
+    color:var(--ink);
+  }
+  table.kw tbody tr:last-child td{border-bottom:none;}
+  table.kw tbody tr:nth-child(even){background:#FBF8F2;}
+  .priority{color:var(--brass);letter-spacing:1px;}
+  .tag-pill{
+    display:inline-block;
+    font-size:11.5px;
+    padding:3px 10px;
+    border-radius:20px;
+    font-weight:600;
+  }
+  .tag-commercial{background:#FBE3D8;color:var(--ember);}
+  .tag-product{background:#F1E6CF;color:var(--brass-deep);}
+  .tag-service{background:#E4ECE6;color:#3C6A4C;}
+
+  /* ===== STRATEGY NOTE ===== */
+  .strategy-note{
+    background:#FFF9EE;
+    border:1px solid var(--line);
+    border-right:4px solid var(--brass);
+    border-radius:8px;
+    padding:20px 24px;
+    margin:30px 0;
+    font-size:14.5px;
+    color:#3D3626;
+  }
+  .strategy-note b{color:var(--brass-deep);}
+
+  /* ===== PLANS ===== */
+  .plans-wrap{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:10px;
+  }
+  .plan-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 24px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+  }
+  .plan-card.featured{
+    border:2px solid var(--brass);
+    box-shadow:0 18px 40px -18px rgba(156,122,60,0.5);
+    transform:translateY(-6px);
+  }
+  .plan-badge{
+    position:absolute;
+    top:-13px;
+    right:24px;
+    background:var(--brass);
+    color:#fff;
+    font-size:11.5px;
+    font-weight:700;
+    padding:4px 14px;
+    border-radius:20px;
+  }
+  .plan-name{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:0.5px;margin-bottom:6px;}
+  .plan-price{font-size:30px;font-weight:800;color:var(--ink);margin-bottom:2px;}
+  .plan-price span{font-size:13px;font-weight:500;color:var(--muted);}
+  .plan-sub{font-size:13px;color:var(--muted);margin-bottom:20px;}
+  .plan-card ul{
+    list-style:none;
+    margin:0 0 24px;
+    padding:0;
+    flex-grow:1;
+  }
+  .plan-card ul li{
+    font-size:13.8px;
+    padding:9px 0 9px 0;
+    border-bottom:1px dashed var(--line);
+    display:flex;
+    gap:8px;
+    align-items:flex-start;
+  }
+  .plan-card ul li:last-child{border-bottom:none;}
+  .plan-card ul li::before{
+    content:"";
+    flex:0 0 6px;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--brass);
+    margin-top:7px;
+  }
+  .plan-card.featured ul li::before{background:var(--ember);}
+  .plan-cta{
+    text-align:center;
+    font-size:13.5px;
+    font-weight:700;
+    border:1px solid var(--ink);
+    border-radius:8px;
+    padding:10px;
+    color:var(--ink);
+  }
+  .plan-card.featured .plan-cta{
+    background:var(--ink);
+    color:#F4EEE1;
+    border-color:var(--ink);
+  }
+
+  /* ===== WHY US ===== */
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:10px;
+  }
+  .why-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:24px 20px;
+  }
+  .why-card .ic{font-size:24px;margin-bottom:10px;}
+  .why-card h3{font-size:15.5px;margin:0 0 8px;}
+  .why-card p{font-size:13.3px;color:var(--muted);margin:0;}
+
+  /* ===== TIMELINE ===== */
+  .timeline{
+    margin-top:20px;
+    border-right:2px solid var(--line);
+    padding-right:24px;
+  }
+  .t-item{margin-bottom:26px;position:relative;}
+  .t-item::before{
+    content:"";
+    position:absolute;
+    right:-29px;
+    top:4px;
+    width:12px;height:12px;
+    border-radius:50%;
+    background:var(--brass);
+    border:3px solid var(--bg);
+  }
+  .t-item .t-month{font-size:13px;font-weight:700;color:var(--brass-deep);margin-bottom:4px;}
+  .t-item p{margin:0;font-size:14px;color:var(--ink);}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink);
+    color:#C8C1B2;
+    padding:36px 56px;
+    margin-top:30px;
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  footer b{color:#D8B978;}
+
+  @media print{
+    body{background:#fff;}
+    .page{max-width:100%;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">پیشنهاد همکاری سئو — حوزه لوستر، آباژور و دکوراسیون نور</div>
+    <h1>رشد ارگانیک برندتان در بازار <span>لوستر و روشنایی</span> با استراتژی داده‌محور</h1>
+    <p class="lead">این پیشنهاد بر اساس بررسی و دسته‌بندی واقعی کلمات کلیدی این صنعت — شامل کلمات تجاری پربازده، صفحات محصول و خدمات — و تحلیل رقبای فعال در این حوزه طراحی شده است.</p>
+  </div>
+
+  <!-- KEYWORD RESEARCH INSIGHT -->
+  <div class="insight-band">
+    <div class="section-tag">۰۱ — پایه تحقیقاتی پروژه</div>
+    <h2 class="section-title" style="color:#F4EEE1;">کیورد ریسرچ تخصصی، نه برآورد حدسی</h2>
+    <p class="section-desc" style="color:#C8C1B2;">پیش از ارائه پلن، فهرست کامل کلمات کلیدی این صنعت استخراج، دسته‌بندی و اولویت‌بندی شده است. این یعنی هر صفحه و مقاله‌ای که تولید می‌شود، روی کلمه‌ای ساخته می‌شود که واقعاً جست‌وجو می‌شود.</p>
+    <div class="insight-grid">
+      <div class="insight-card"><div class="num">+۳۴</div><div class="lbl">کلمه کلیدی بررسی‌شده در سه دسته اصلی</div></div>
+      <div class="insight-card"><div class="num">۱۱</div><div class="lbl">کلمه کلیدی تجاری با اولویت ⭐⭐⭐⭐ تا ⭐⭐⭐⭐⭐</div></div>
+      <div class="insight-card"><div class="num">۵</div><div class="lbl">رقیب اصلی تحلیل‌شده در نتایج جست‌وجو</div></div>
+      <div class="insight-card"><div class="num">۳</div><div class="lbl">دسته محتوایی: محصول، خدمات، تجاری</div></div>
+    </div>
+  </div>
+
+  <!-- KEYWORD TABLE -->
+  <section>
+    <div class="section-tag">نمونه‌ای از کلمات کلیدی اولویت‌دار</div>
+    <h2 class="section-title">کلماتی که در حال حاضر مشتری برای آن‌ها جست‌وجو می‌کند</h2>
+    <p class="section-desc">این فهرست از تحقیق کلیدواژه‌ای استخراج شده که با تحلیل رقبای فعال (iranluster، luxurylight، loostermoon، chenco، modnoor) تطبیق داده شده است.</p>
+
+    <div class="kw-table-wrap">
+      <table class="kw">
+        <thead>
+          <tr>
+            <th>کلمه کلیدی</th>
+            <th>دسته</th>
+            <th>اولویت</th>
+            <th>وضعیت رقابتی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>خرید لوستر</td>
+            <td><span class="tag-pill tag-commercial">تجاری</span></td>
+            <td class="priority">⭐⭐⭐⭐⭐</td>
+            <td>در همه سایت‌های رقیب پوشش داده شده — رقابت بالا</td>
+          </tr>
+          <tr>
+            <td>قیمت لوستر</td>
+            <td><span class="tag-pill tag-commercial">تجاری</span></td>
+            <td class="priority">⭐⭐⭐⭐⭐</td>
+            <td>کلمه پرتقاضا با نیت خرید بالا</td>
+          </tr>
+          <tr>
+            <td>خرید اینترنتی لوستر</td>
+            <td><span class="tag-pill tag-commercial">تجاری</span></td>
+            <td class="priority">⭐⭐⭐⭐⭐</td>
+            <td>پوشش توسط chenco و iranluster</td>
+          </tr>
+          <tr>
+            <td>لوستر ارزان</td>
+            <td><span class="tag-pill tag-commercial">تجاری</span></td>
+            <td class="priority">⭐⭐⭐⭐⭐</td>
+            <td>پوشش توسط iranluster و loostermoon</td>
+          </tr>
+          <tr>
+            <td>تولید کننده لوستر</td>
+            <td><span class="tag-pill tag-commercial">تجاری</span></td>
+            <td class="priority">⭐⭐⭐⭐</td>
+            <td>فرصت رتبه‌گیری برای برندهای تولیدی</td>
+          </tr>
+          <tr>
+            <td>مشاوره خرید لوستر</td>
+            <td><span class="tag-pill tag-service">خدمت</span></td>
+            <td class="priority">⭐⭐⭐⭐</td>
+            <td>صفحه خدماتی با نرخ تبدیل بالا</td>
+          </tr>
+          <tr>
+            <td>خرید اقساطی لوستر</td>
+            <td><span class="tag-pill tag-service">خدمت</span></td>
+            <td class="priority">⭐⭐⭐⭐</td>
+            <td>فقط loostermoon و chenco فعال</td>
+          </tr>
+          <tr>
+            <td>آباژور رومیزی / ایستاده</td>
+            <td><span class="tag-pill tag-product">محصول جانبی</span></td>
+            <td class="priority">⭐⭐⭐⭐</td>
+            <td>فرصت تولید صفحات دسته‌بندی جدید</td>
+          </tr>
+          <tr>
+            <td>چراغ دیواری</td>
+            <td><span class="tag-pill tag-product">محصول جانبی</span></td>
+            <td class="priority">⭐⭐⭐</td>
+            <td>پوشش محدود — فرصت رشد</td>
+          </tr>
+          <tr>
+            <td>نصب لوستر / تعمیر لوستر</td>
+            <td><span class="tag-pill tag-service">خدمت</span></td>
+            <td class="priority">⭐⭐⭐</td>
+            <td>صفحه خدماتی با ترافیک محلی بالا</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="strategy-note">
+      <b>چرا این داده‌ها مهم است:</b> کلمات کلیدی تجاری مثل «خرید لوستر»، «قیمت لوستر» و «خرید اینترنتی لوستر» بالاترین اولویت (⭐⭐⭐⭐⭐) را دارند و توسط تمام رقبای اصلی پوشش داده شده‌اند؛ یعنی نبودِ این کلمات در سایت شما به‌معنی از دست دادن مستقیم مشتری به نفع رقبا است. در مقابل، کلمات محصولات جانبی مانند آباژور و چراغ دیواری پوشش ضعیف‌تری در بازار دارند و فرصت رتبه‌گیری سریع‌تری ایجاد می‌کنند. پلن پیشنهادی دقیقاً بر این اساس طراحی شده: ابتدا تثبیت در کلمات تجاری پرتقاضا، سپس توسعه به محصولات جانبی و خدمات.
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section>
+    <div class="section-tag">۰۲ — پلن‌های پیشنهادی</div>
+    <h2 class="section-title">سه سطح همکاری، متناسب با سرعت رشد مدنظر شما</h2>
+    <p class="section-desc">هر پلن مستقیماً روی دسته‌های کلیدواژه‌ای بالا بنا شده است — از تثبیت پایه تا تسلط کامل بر نتایج جست‌وجوی این صنعت.</p>
+
+    <div class="plans-wrap">
+      <!-- پایه -->
+      <div class="plan-card">
+        <div class="plan-name">پلن پایه</div>
+        <div class="plan-price">۳۵<span> میلیون تومان / ماه</span></div>
+        <div class="plan-sub">تثبیت فنی + ورود به کلمات کلیدی اصلی</div>
+        <ul>
+          <li>بهینه‌سازی فنی سایت (سرعت، ساختار URL، canonical، sitemap)</li>
+          <li>تولید و بهینه‌سازی ۴ صفحه دسته‌بندی محصول در ماه</li>
+          <li>۴ مقاله بلاگ بهینه‌شده (راهنما، آموزشی)</li>
+          <li>۳ ریپورتاژ در سایت‌های مرتبط</li>
+          <li>گزارش ماهانه رتبه کلمات کلیدی</li>
+        </ul>
+        <div class="plan-cta">شروع رشد پایدار</div>
+      </div>
+
+      <!-- پیشرفته -->
+      <div class="plan-card featured">
+        <div class="plan-badge">پیشنهاد ویژه</div>
+        <div class="plan-name">پلن پیشرفته</div>
+        <div class="plan-price">۵۵<span> میلیون تومان / ماه</span></div>
+        <div class="plan-sub">رقابت مستقیم با iranluster و loostermoon</div>
+        <ul>
+          <li>همه موارد پلن پایه</li>
+          <li>تولید ۸ صفحه دسته‌بندی و زیردسته در ماه</li>
+          <li>۶ مقاله بلاگ تخصصی (مقایسه، ترند، معرفی محصول)</li>
+          <li>۵ ریپورتاژ در سایت‌های دکوراسیون، معماری، خانه</li>
+          <li>لینک‌سازی داخلی استراتژیک بین صفحات</li>
+          <li>بهینه‌سازی Google Business Profile</li>
+          <li>گزارش رقبا و آنالیز ماهانه</li>
+        </ul>
+        <div class="plan-cta">پیشنهاد منتخب کارشناسان ما</div>
+      </div>
+
+      <!-- حرفه‌ای -->
+      <div class="plan-card">
+        <div class="plan-name">پلن حرفه‌ای</div>
+        <div class="plan-price">۸۵<span> میلیون تومان / ماه</span></div>
+        <div class="plan-sub">تسلط کامل بر نتایج جست‌وجوی صنعت</div>
+        <ul>
+          <li>همه موارد پلن پیشرفته</li>
+          <li>تولید کامل محتوای سایت (تمام صفحات دسته‌بندی از ابتدا)</li>
+          <li>۱۰ مقاله بلاگ تخصصی با تمرکز روی long-tail</li>
+          <li>۸ ریپورتاژ هدفمند</li>
+          <li>استراتژی لینک‌سازی خارجی (outreach)</li>
+          <li>بهینه‌سازی صفحات محصول (schema، rich snippet)</li>
+          <li>تضمین رشد ترافیک ارگانیک ۳۰٪ ظرف ۶ ماه</li>
+        </ul>
+        <div class="plan-cta">حداکثر سرعت رشد</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section>
+    <div class="section-tag">۰۳ — چرا این تیم</div>
+    <h2 class="section-title">تخصص ما، نه شعار بلکه روش کار است</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ic">🔎</div>
+        <h3>تحقیق کلیدواژه‌ای واقعی</h3>
+        <p>هر پیشنهاد بر اساس بیش از ۳۴ کلمه کلیدی بررسی‌شده و دسته‌بندی‌شده در این صنعت خاص ارائه می‌شود، نه قالب عمومی سئو.</p>
+      </div>
+      <div class="why-card">
+        <div class="ic">🏆</div>
+        <h3>تحلیل رقبای فعال بازار</h3>
+        <p>وضعیت پوشش کلیدواژه در سایت‌های iranluster، luxurylight، loostermoon، chenco و modnoor بررسی و فرصت‌های خالی شناسایی شده است.</p>
+      </div>
+      <div class="why-card">
+        <div class="ic">📈</div>
+        <h3>اولویت‌بندی بر اساس بازگشت سرمایه</h3>
+        <p>کلمات کلیدی بر اساس نیت خرید و حجم رقابت ستاره‌گذاری شده‌اند تا منابع روی پربازده‌ترین کلمات متمرکز شود.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section>
+    <div class="section-tag">۰۴ — افق زمانی نتایج</div>
+    <h2 class="section-title">چه زمانی نتایج را می‌بینید؟</h2>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-month">ماه ۱</div>
+        <p>رفع موارد فنی، شروع تولید صفحات و محتوا بر اساس کلمات کلیدی اولویت‌دار</p>
+      </div>
+      <div class="t-item">
+        <div class="t-month">ماه ۲ تا ۳</div>
+        <p>ورود کلمات کلیدی به صفحات نتایج جست‌وجو و شروع رشد ترافیک ارگانیک</p>
+      </div>
+      <div class="t-item">
+        <div class="t-month">ماه ۴ تا ۶</div>
+        <p>تثبیت رتبه در کلمات کلیدی تجاری پرارزش و رشد محسوس نرخ تبدیل</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>پیشنهاد تهیه‌شده بر اساس تحقیق کلیدواژه‌ای اختصاصی حوزه لوستر و روشنایی</div>
+    <div><b>تیم سئو</b> — ۱۴۰۵</div>
+  </footer>
+
+</div>
+</body>
+</html>
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  />;
+}
