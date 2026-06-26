@@ -122,7 +122,7 @@ export default function Home() {
           {/* پایه */}
           <div className="plan-card">
             <div className="plan-name">پلن پایه</div>
-            <div className="plan-price">۳۵<span> میلیون تومان / ماه</span></div>
+            <div className="plan-price">۳۹<span> میلیون تومان / ماه</span></div>
             <div className="plan-sub">تثبیت فنی + ورود به کلمات کلیدی اصلی</div>
             <ul>
               <li>بهینه‌سازی فنی سایت (سرعت، ساختار URL، canonical، sitemap)</li>
@@ -138,7 +138,7 @@ export default function Home() {
           <div className="plan-card featured">
             <div className="plan-badge">پیشنهاد ویژه</div>
             <div className="plan-name">پلن پیشرفته</div>
-            <div className="plan-price">۵۵<span> میلیون تومان / ماه</span></div>
+            <div className="plan-price">۵۸<span> میلیون تومان / ماه</span></div>
             <div className="plan-sub">رقابت مستقیم با iranluster و loostermoon</div>
             <ul>
               <li>همه موارد پلن پایه</li>
@@ -155,7 +155,7 @@ export default function Home() {
           {/* حرفه‌ای */}
           <div className="plan-card">
             <div className="plan-name">پلن حرفه‌ای</div>
-            <div className="plan-price">۸۵<span> میلیون تومان / ماه</span></div>
+            <div className="plan-price">۸۸<span> میلیون تومان / ماه</span></div>
             <div className="plan-sub">تسلط کامل بر نتایج جست‌وجوی صنعت</div>
             <ul>
               <li>همه موارد پلن پیشرفته</li>
