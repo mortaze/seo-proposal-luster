@@ -1,6 +1,10 @@
+import WebDesignProposalSection from "./WebDesignProposalSection";
+
 export default function Home() {
   return (
     <div className="page">
+
+      <WebDesignProposalSection />
 
       {/* HERO */}
       <div className="hero">
@@ -212,7 +216,7 @@ export default function Home() {
 
       <footer>
         <div>پیشنهاد تهیه‌شده بر اساس تحقیق کلیدواژه‌ای اختصاصی حوزه لوستر و روشنایی</div>
-        <div><b>تیم سئو</b> — ۱۴۰۵</div>
+        <div><b>تیم طراحی و توسعه سئو</b> — ۱۴۰۵</div>
       </footer>
 
     </div>

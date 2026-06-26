@@ -306,6 +306,15 @@ footer{
 }
 footer b{color:#D8B978;}
 
+/* ===== WEB DESIGN PROPOSAL EXTRAS ===== */
+.plan-meta{font-size:12.5px;color:var(--brass-deep);font-weight:600;margin-bottom:20px;}
+.tag-good{background:#E4ECE6;color:#3C6A4C;}
+.tag-bad{background:#FBE3D8;color:var(--ember);}
+.pay-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:10px;}
+.pay-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;}
+.pay-card h3{margin:0 0 10px;font-size:15px;color:var(--brass-deep);}
+.pay-card p{margin:0;font-size:14px;color:var(--ink);}
+
 /* ===== RESPONSIVE ===== */
 
 /* Tablet (max-width: 1024px) */
@@ -317,6 +326,9 @@ footer b{color:#D8B978;}
     grid-template-columns: repeat(2, 1fr);
   }
   .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pay-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -416,6 +428,9 @@ footer b{color:#D8B978;}
   .hero-eyebrow {
     font-size: 12px;
     padding: 5px 14px;
+  }
+  .pay-grid {
+    grid-template-columns: 1fr;
   }
 }
 
